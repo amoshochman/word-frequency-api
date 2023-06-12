@@ -51,6 +51,3 @@ def get_stats():
 
     return jsonify(dict_response)
 
-
-if __name__ == '__main__':
-    app.run()
