@@ -31,7 +31,7 @@ That is, I think this way is a bit simpler.
 
 Suboptimal stuff, potential improvements, etc:
 
-- The top-5 words is calculated in a pretty efficient way. We store, as we said, a top-5 list.
+- The top-5 words is calculated in a pretty efficient way. We store, as we said, a top-5 list, and could be improved using for example a heap.
 - The minimum is calculated through a dictionary with the distributions. It could be probably improved: 
 right now, in order to retrieve the minimum we need to go over all the values in the dictionary.
 (The different frequencies that can be found.)
