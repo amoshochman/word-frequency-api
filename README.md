@@ -24,3 +24,6 @@ That is, we add the overhead of inserting to and removing from this additional l
 On other hand, this way we make the GETs faster, as we'll always just retrieve the data from the short list, instead
 of iterating over the whole data, which appears to be not bounded.
 Being that the POSTs are supposed to be much more than the GETs, we'd need more information in order to take a wiser decision.
+
+Edge-cases:
+...
