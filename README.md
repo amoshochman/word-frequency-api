@@ -14,7 +14,7 @@ top5 words (with their respective frequency) and both the minimum and median fre
 The code is written allowing for concurrency and expecting more POSTs than GETs.
 
 
-**Instructions to run**
+**Instructions to run**</br>
 You can either run gunicorn_start.sh or through the Dockerfile (don't forget to redirect to port 5000. That is, run for example "docker build -t freq ." and then "docker run -p 5000:5000 freq")
 
 Implementation note:
