@@ -24,6 +24,14 @@ That is, we add the overhead of inserting to and removing from this additional l
 On other hand, this way we make the GETs faster, as we'll always just retrieve the data from the short list, instead
 of iterating over the whole data, which appears to be not bounded.
 Being that the POSTs are supposed to be much more than the GETs, we'd need more information in order to take a wiser decision.
+Instead of that list of size 5, we could use a data structure that keeps sorted (heapq, sortedlist, etc). That would make the code faster by a constant rate.
 
-Edge-cases:
-...
+Suboptimal stuff, potential improvements, etc:
+
+- The top-5 words is calculated in a pretty efficient way. We store, as we said, a top-5 list.
+- The minimum is calculated through a dictionary with the distributions. It could be probably improved: 
+right now, in order to retrieve the minimum we need to go over all the values in the dictionary.
+(The different frequencies that can be found.)
+- The median is calculated in a suboptimal way: going over all the elements in the counter
+(That's what we avoided using the top-5 list and therefore this needs to be changed in order to take advantage from the other optimization) 
+In order to make it more efficient, we could probably store two heaps: one for the frequencies bigger than the median and one for the smaller ones.
